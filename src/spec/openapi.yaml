@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000/
+    description: Local Development
+
+paths:
+  /health:
+    get:
+      summary: Health Check
+      responses:
+        '200':
+          description: Health check response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  datetime:
+                    type: string
+                  status:
+                    type: string
+                    enum:
+                      - healthy
+                      - degraded
+                      - unhealthy
+                  hostname:
+                    type: string
+                  commit:
+                    type: string
+                  version:
+                    type: string

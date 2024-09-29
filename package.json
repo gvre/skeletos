@@ -1,0 +1,61 @@
+{
+  "name": "skeletos",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "version": "APP_VERSION",
+  "commit": "GIT_COMMIT",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "jest",
+    "lint:all": "npm run lint && npm run lint:circular",
+    "lint": "npm run lint:base src",
+    "lint:fix": "npm run lint:base src -- --fix",
+    "lint:base": "eslint -c eslint.config.js --max-warnings 0",
+    "lint:circular": "madge --circular --extensions ts src",
+    "prettier:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.16.5",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.9",
+    "madge": "^8.0.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.5.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.20.0",
+    "morgan": "^1.10.0",
+    "tsx": "^4.19.0",
+    "winston": "^3.14.2",
+    "zod": "^3.23.8"
+  },
+  "module": "src/index.ts",
+  "lint-staged": {
+    "*.{ts,js,md}": "prettier --write"
+  }
+}
