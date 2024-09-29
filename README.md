@@ -100,4 +100,4 @@ The following scripts are available in `package.json`:
 
 ## License
 
-- [MIT](LICENSE)
+- [MIT](LICENSE.md)
