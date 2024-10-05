@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "_version": "22.0.0",
-  "extends": "@tsconfig/node22/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "lib": ["ES2023", "DOM"],
     "target": "ESNext",
