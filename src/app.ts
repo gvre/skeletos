@@ -6,6 +6,7 @@ import { logger } from './logger';
 import { router } from './routes';
 
 const app = express();
+
 app.disable('x-powered-by');
 
 // Get the user IP, instead of the proxy one.
@@ -27,6 +28,7 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
 const corsOptions: CorsOptions = {
   exposedHeaders: ['X-Request-Id'],
 };
+
 app.use(cors(corsOptions));
 app.use(morgan('combined'));
 app.use(express.json());

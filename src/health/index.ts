@@ -1,5 +1,5 @@
-import express from 'express';
 import { hostname } from 'node:os';
+import express from 'express';
 
 enum HealthStatus {
   Healthy = 'healthy',
@@ -21,6 +21,7 @@ const runtimeVersion = process.versions.node;
 
 export function registerHealthRoutes(extra?: { commit?: string; appVersion?: string }): express.Router {
   const router = express.Router();
+
   router.get('/', (req: express.Request, res: express.Response) => {
     const healthCheckResponse: HealthCheckResponse = {
       datetime: new Date().toISOString(),
@@ -29,6 +30,7 @@ export function registerHealthRoutes(extra?: { commit?: string; appVersion?: str
       runtimeVersion,
       ...extra,
     };
+
     res.json(healthCheckResponse);
   });
 
