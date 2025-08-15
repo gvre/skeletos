@@ -2,7 +2,7 @@
   "name": "skeletos",
   "type": "module",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "22.x"
   },
   "packageManager": "pnpm@10.14.0",
   "version": "APP_VERSION",
