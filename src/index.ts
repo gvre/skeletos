@@ -15,3 +15,5 @@ process.on('unhandledRejection', (error) => {
   console.error('Uncaught Exception:', error);
   cleanup(server);
 });
+
+export default server;

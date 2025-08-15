@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
 
     "verbatimModuleSyntax": false,
-    "noEmit": true,
-
+    "noEmit": false,
+    "rootDir": "./src",
+    "outDir": "./public",
     "strict": true,
     "skipLibCheck": true,
 
