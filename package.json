@@ -4,6 +4,7 @@
   "engines": {
     "node": ">=22.0.0"
   },
+  "packageManager": "pnpm@10.14.0",
   "version": "APP_VERSION",
   "commit": "GIT_COMMIT",
   "scripts": {
@@ -11,9 +12,9 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "test": "vitest run",
-    "lint:all": "npm run lint && npm run lint:circular",
-    "lint": "npm run lint:base src",
-    "lint:fix": "npm run lint:base src -- --fix",
+    "lint:all": "pnpm run lint && pnpm run lint:circular",
+    "lint": "pnpm run lint:base src",
+    "lint:fix": "pnpm run lint:base src -- --fix",
     "lint:base": "eslint -c eslint.config.js --max-warnings 0",
     "lint:circular": "madge --circular --extensions ts src",
     "prettier:check": "prettier --check ."
