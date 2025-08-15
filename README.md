@@ -13,7 +13,7 @@ to help you get started quickly and maintain code quality.
   - [TypeScript](#typescript)
   - [ESLint](#eslint)
   - [Prettier](#prettier)
-  - [Jest](#jest)
+  - [Vitest](#vitest)
   - [Docker](#docker)
 - [Usage](#usage)
 - [License](#license)
@@ -24,7 +24,7 @@ to help you get started quickly and maintain code quality.
 - Express for building web applications
 - ESLint for linting and code quality
 - Prettier for code formatting
-- Jest for testing
+- Vitest for testing
 - Docker for containerization
 
 ## Prerequisites
@@ -58,10 +58,16 @@ cd skeletos
 nvm install
 ```
 
-5. **Install the dependencies**:
+5. **Enable corepack**:
 
 ```bash
-npm install
+corepack enable
+```
+
+6. **Install the dependencies**:
+
+```bash
+pnpm install --frozen-lockfile
 ```
 
 ## Configuration
@@ -78,9 +84,9 @@ ESLint is configured in `eslint.config.js`. It helps maintain code quality by en
 
 Prettier is configured in `.prettierrc`. It ensures consistent code formatting across the project. You can adjust the settings to fit your preferences.
 
-### Jest
+### Vitest
 
-Jest is configured in `jest.config.js`. It is set up for testing TypeScript files.
+Vitest is configured in `vitest.config.ts`. It is set up for testing TypeScript files.
 
 ### Docker
 
@@ -90,13 +96,13 @@ The project includes a `Dockerfile` for containerization. This allows you to bui
 
 The following scripts are available in `package.json`:
 
-- `npm run build`: Compiles the TypeScript files to do syntax checking.
-- `npm run start`: Starts the application in production mode.
-- `npm run dev`: Starts the application in development mode with hot reloading.
-- `npm run test`: Runs the Jest test suite.
-- `npm run lint`: Runs ESLint to check
-- `npm run lint:circular`: Runs Madge to check for circular dependencies.
-- `npm run lint:all`: Runs ESLint and Madge.
+- `pnpm run build`: Compiles the TypeScript files to do syntax checking.
+- `pnpm run start`: Starts the application in production mode.
+- `pnpm run dev`: Starts the application in development mode with hot reloading.
+- `pnpm run test`: Runs the Jest test suite.
+- `pnpm run lint`: Runs ESLint to check
+- `pnpm run lint:circular`: Runs Madge to check for circular dependencies.
+- `pnpm run lint:all`: Runs ESLint and Madge.
 
 ## License
 
