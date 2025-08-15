@@ -46,7 +46,7 @@ jobs:
         with:
           images: ${{ secrets.DOCKER_HUB_USERNAME }}/skeletos
           tags: |
-            type=sha,prefix=git-
+            type=raw,value=git-${{ steps.commit.outputs.sha }}
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
