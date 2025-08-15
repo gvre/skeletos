@@ -10,7 +10,7 @@ describe('Health routes', () => {
       status: 'healthy',
       hostname: expect.any(String),
       commit: expect.any(String),
-      version: expect.any(String),
+      appVersion: expect.any(String),
     });
   });
 });
