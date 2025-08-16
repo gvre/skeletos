@@ -55,6 +55,6 @@
   },
   "module": "src/index.ts",
   "lint-staged": {
-    "*.{ts,js,md}": "prettier --write"
+    "*.{ts,js,md,yaml,yml}": "prettier --write"
   }
 }
