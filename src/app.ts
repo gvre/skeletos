@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', router);
 
 // Default error handler
-router.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   // If you call next() with an error after you have started writing the response
   // (for example, if you encounter an error while streaming the response to the client)
   // the Express default error handler closes the connection and fails the request.

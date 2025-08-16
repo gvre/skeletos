@@ -1,4 +1,4 @@
-import winston from 'winston';
+import type winston from 'winston';
 
 declare global {
   namespace Express {
