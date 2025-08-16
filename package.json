@@ -17,7 +17,8 @@
     "lint:fix": "pnpm run lint:base src -- --fix",
     "lint:base": "eslint -c eslint.config.js --max-warnings 0",
     "lint:circular": "madge --circular --extensions ts src",
-    "prettier:check": "prettier --check ."
+    "prettier:check": "prettier --check .",
+    "prepare": "husky || true"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
