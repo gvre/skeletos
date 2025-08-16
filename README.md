@@ -1,7 +1,7 @@
 # Skeletos - A Node.js, Express, TypeScript project skeleton
 
 This is a skeleton project for building applications using Node.js, Express, and TypeScript.
-It comes pre-configured with essential tools and libraries, including TypeScript, ESLint, Prettier, Jest, and Docker,
+It comes pre-configured with essential tools and libraries, including TypeScript, ESLint, Prettier, Vitest, and Docker,
 to help you get started quickly and maintain code quality.
 
 ## Table of Contents
@@ -115,7 +115,7 @@ The following scripts are available in `package.json`:
 - `pnpm run build`: Compiles the TypeScript files to do syntax checking.
 - `pnpm run start`: Starts the application in production mode.
 - `pnpm run dev`: Starts the application in development mode with hot reloading.
-- `pnpm run test`: Runs the Jest test suite.
+- `pnpm run test`: Runs the Vitest test suite.
 - `pnpm run lint`: Runs ESLint to check
 - `pnpm run lint:circular`: Runs Madge to check for circular dependencies.
 - `pnpm run lint:all`: Runs ESLint and Madge.
