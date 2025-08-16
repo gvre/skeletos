@@ -15,6 +15,7 @@ to help you get started quickly and maintain code quality.
   - [Prettier](#prettier)
   - [Vitest](#vitest)
   - [Docker](#docker)
+  - [Pre-commit Hooks](#pre-commit-hooks)
 - [Usage](#usage)
 - [License](#license)
 
@@ -26,6 +27,7 @@ to help you get started quickly and maintain code quality.
 - Prettier for code formatting
 - Vitest for testing
 - Docker for containerization
+- Husky with lint-staged for pre-commit hooks
 
 ## Prerequisites
 
@@ -91,6 +93,20 @@ Vitest is configured in `vitest.config.ts`. It is set up for testing TypeScript 
 ### Docker
 
 The project includes a `Dockerfile` for containerization. This allows you to build and run your application in a Docker container.
+
+### Pre-commit Hooks
+
+The project uses Husky with lint-staged to automatically format code before commits. The pre-commit hook runs Prettier on staged files to ensure consistent code formatting.
+
+To set up pre-commit hooks (if not already configured):
+
+```bash
+npx husky init
+echo "pnpm exec lint-staged" > .husky/pre-commit
+chmod +x .husky/pre-commit
+```
+
+The lint-staged configuration in `package.json` formats TypeScript, JavaScript, Markdown, and YAML files automatically on commit.
 
 ## Usage
 
