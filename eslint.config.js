@@ -10,7 +10,7 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
   {
-    files: ['src/*.ts'],
+    files: ['src/**/*.ts'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -23,7 +23,8 @@ export default tseslint.config(
     },
     rules: {
       "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/consistent-type-exports": "error"
+      "@typescript-eslint/consistent-type-exports": "error",
+      "no-console": "error"
     },
   },
 );
